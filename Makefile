@@ -9,4 +9,3 @@ pull:
 
 ship: pull
 	git push origin master
-	git push heroku master
