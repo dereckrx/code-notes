@@ -8,7 +8,7 @@
     "build": "gatsby build",
     "heroku-postbuild": "gatsby build",
     "clean": "gatsby clean",
-    "start": "gatsby serve"
+    "serve": "gatsby serve"
   },
   "repository": {
     "type": "git",
