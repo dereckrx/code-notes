@@ -1,0 +1,28 @@
+{
+  "name": "code-notes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gatsby develop",
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "start": "gatsby serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkrxcode/code-notes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dkrxcode/code-notes/issues"
+  },
+  "homepage": "https://github.com/dkrxcode/code-notes#readme",
+  "dependencies": {
+    "gatsby": "^2.23.9",
+    "gatsby-theme-code-notes": "^1.10.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}

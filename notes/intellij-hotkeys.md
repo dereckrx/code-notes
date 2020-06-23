@@ -1,3 +1,8 @@
+---
+title: IntelliJ Hotkeys
+tags: [intellij, hope]
+---
+
 ## InteilliJ - Hotkeys 
 
 * Search Anything: shift+shift (tab to jump sections) => cmd + p
