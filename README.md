@@ -1,5 +1,7 @@
 ## Code Notes
 
+Some notes for code.
+
 Based off of Gatsby Theme Code Notes
 
 https://notes.zander.wtf/
