@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "gatsby develop",
     "build": "gatsby build",
+    "heroku-postbuild": "gatsby build",
     "clean": "gatsby clean",
     "start": "gatsby serve"
   },
