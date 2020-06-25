@@ -9,3 +9,8 @@ pull:
 
 ship: pull
 	git push origin master
+
+save: pull
+	git add notes
+	git commit -m "Save notes"
+	git push origin master
