@@ -78,6 +78,8 @@ App.kt
 ```
 
 ## V4: Components (single application)
+In the v4 extracts domain concepts Users, Accounts, and Projects as components. 
+
 ```
 └── app/src/main
   └── backlog
@@ -87,23 +89,56 @@ App.kt
     └── StoryRecord.kt
   └── allocations
   └── timesheets
+  App.kt
 └── components
   └── users/src/main
   └── accounts/src/main
   └── projects/src/main
-  └── jdbc-support
-  └── rest-support
-  └── test-support
+  └── jdbc-support/src/main
+  └── rest-support/src/main
+  └── test-support/src/main
 └── databases/continuum
   └── v1__initial_schema.sql
 ```
 
-The main characteristic of the v4 commit is that each component is individually built and tested. 
-This is similar to feature groups (loosely coupled and highly cohesive). 
-Dependencies are clearly described within the `build.gradle` file and circular dependencies are resolved. 
-The v4 commit sets us up nicely to introduce Services.
+These are business domain concepts as apposed to app-domain concepts like allocations, backlog, timesheets. 
+Business domain components could be extracted as libraries and used by multiple projects in the company.
 
-Each component defines it's own dependecies. 
+In Domain Centric Architecture, app components can depend on on domain components, but not the other way around. 
+This avoids circular dependencies.
+
+```
+interfaces -> app -> domain <- infra
+```
+
+Looking at our dependencies, our app components depend on domain components but none of our domain components depend on app components.
+
+```
+app
+-> backlog
+-> allocations
+-> timesheets
+-> accounts
+  -> users
+-> projects
+-> users
+-> jdbcsupport
+  -> mysql
+-> restsupport
+  -> http
+``` 
+
+Components are extracted so that:
+
+* they are pure business logic 
+* contain no framework code (such as spring-boot server code)
+* only depend on other components (no circular dependencies)
+* Each component can be individually built and tested
+
+A component could live on it's own and be used like a library.
+And at this point, the jdbc-support and reset-support components start to look like libraries.
+
+Each component defines it's own dependencies in it's `build.gradle`.
 So mysql dependencies move into the jdbc-support component and rest dependencies move into rest-support.
 The `build.gradle` of app/src/main/backlog then defines only the components as dependencies.
 
@@ -134,7 +169,7 @@ Each microservice has it's own database
 ## V8+: Service discovery, Circuit Breaker, Distributed System 
 Services are not hardcoded in the manifest/config file, 
 instead they use a service discover client to find the service url, 
-and now load balancing is introduced
+and now load balancing is introduced.
 
 ---
 ## Sources
