@@ -55,6 +55,7 @@ App.kt
 ```
 
 ## V3: Feature Groups (bounded contexts)
+Files are starting to be organized by domain components.
 
 ```
 app/src/main/
