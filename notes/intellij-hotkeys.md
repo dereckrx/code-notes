@@ -1,9 +1,17 @@
 ---
 title: IntelliJ Hotkeys
-tags: [intellij, hope]
+tags: [intellij]
 ---
 
 ## InteilliJ - Hotkeys 
+
+Multi-cursur drag: hold `alt` then click and drag up or down with the mouse
+
+Select highlighted: `ctrl+g`
+
+move line: `cmd+shift+up or down`
+
+select more: alt+up-arrow
 
 Lowercase Selection: `Shift + command + u`
 
