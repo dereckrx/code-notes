@@ -1,0 +1,62 @@
+java
+    java8
+        guava
+    cheatsheet
+    lists, maps
+        List.of
+    streams
+    functional_programming
+    lombok
+        @value
+        @data
+        @builder
+    spring
+        configuration
+        controller, service
+    testing
+        spring
+            unitTest
+                service, controller
+            integrationTest
+                @SpringBootTest
+                @MockBean
+            e2eTest
+            
+javascript
+    testing
+        jest
+        puppettier
+        cypress
+    cheatsheet
+    typescript
+    node
+    bundlers
+        webpack
+        snowpack
+        parcel
+    mobx-state-tree
+    redux
+    react
+    storybook
+    react-native
+        testing
+            detox
+            react-testing-library
+
+command-line
+    Makefile
+    awk
+    find
+    bash
+        functions
+    alias
+    dotfiles
+    curl
+        post_json.sh
+        
+workstation
+    flycut
+    shiftit
+    iTerm
+    bash-it
+        
