@@ -1,19 +1,41 @@
 ---
 title: IntelliJ Hotkeys
-tags: [intellij, hope]
+tags: [intellij]
 ---
 
 ## InteilliJ - Hotkeys 
 
-* Search Anything: shift+shift (tab to jump sections) => cmd + p
-* ctrl+space: show auto-complete options
-* Ctrl+p: get params for a method => ctl+p
-* Run Test: shift+ctrl+r
-* cmd+r: Replace in file
-* cmd+j: Jump to line
-* ctl+opt+O: Optimize Imports (teeth Open)
+Multi-cursur drag: hold `alt` then click and drag up or down with the mouse
 
-* cmd+shift+a - search shortcuts / Perform any action / Menu actions
-* Open: class: cmd+o, files: cmd+shif+o 
-* Cmd+Shift+F12: toggle windows
-* ctl+alt+L (L-pair+L) : reformat indentations
+Select highlighted: `ctrl+g`
+
+move line: `cmd+shift+up or down`
+
+select more: alt+up-arrow
+
+Lowercase Selection: `Shift + command + u`
+
+List recent files: `cmd+e`
+
+Search Anything: `shift, shift` 
+* tab to jump sections => cmd + p
+
+Show auto-complete options: `ctrl+space`
+
+Show method params: `ctl+p`
+
+Run Test at cursor: `shift+ctrl+r`
+
+Replace in file: `cmd+r`
+
+Jump to line: `cmd+j`
+
+Optimize Imports: `ctl+alt+o`
+
+Reformat code: `ctl+alt+l`
+
+Search shortcuts / Perform any action / Menu actions: `cmd+shift+a`
+
+Open files: `cmd+shif+o`
+
+Toggle windows: `cmd+shift+F12`
