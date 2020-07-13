@@ -1,3 +1,11 @@
+Online Console: `https://repl.it/languages` 
+
+Implement
+* Strings: interpolate, split, concat, substitute, contains
+* Lists: concat, push pop, 
+* Maps: get
+* Functional: copyWith,
+
 ```
 java
     enviorment-variables
