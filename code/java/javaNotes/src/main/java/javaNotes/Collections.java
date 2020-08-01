@@ -1,4 +1,7 @@
+package javaNotes;
+
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Collections {
     public static void p(Object obj) {
@@ -25,11 +28,15 @@ public class Collections {
       // Immutable empty
       var empty = List.of();
 
+      // Why use this? Is it < java 9?
+      List<String> myList =
+          Arrays.asList("a1", "a2", "b1", "c2", "c1");
+
       List<String> arrayList = new ArrayList<>(
           Arrays.asList("Geeks", "For", "Geeks"));
       p(arrayList);
 
-      List<String> list2 = list1.stream().skip(1).collect(Collectors.toList())
+      List<String> list2 = myList.stream().skip(1).collect(Collectors.toList());
       p(list2);
 
       //https://www.baeldung.com/java-immutable-list
@@ -37,3 +44,26 @@ public class Collections {
 
     }
 }
+
+//public class TryStreams {
+//    List<Person> filtered =
+//        persons
+//            .stream()
+//            .filter(p -> p.name.startsWith("P"))
+//            .collect(Collectors.toList());
+//
+//    myList
+//        .stream()
+//        .filter(s -> s.startsWith("c"))
+//        .map(String::toUpperCase)
+//    .sorted()
+//    .forEach(System.out::println);
+//
+//    List<Person> filtered =
+//        persons
+//            .stream()
+//            .filter(p -> p.name.startsWith("P"))
+//            .collect(Collectors.toList());
+//}
+
+
