@@ -21,13 +21,4 @@ class TimingTest {
         assert(output.get().contains(description));
     }
 
-    @Test
-    void isEven() {
-        assertFalse(Timing.isEven(1));
-        assert(Timing.isEven(2));
-        assertFalse(Timing.isEven(3));
-        assert(Timing.isEven(4));
-        assert(Timing.isEven(564));
-        assertFalse(Timing.isEven(1003));
-    }
 }
