@@ -19,3 +19,9 @@ https://devhints.io/jest
 
 https://www.baeldung.com/vavr
 https://winterbe.com/posts/2014/07/31/java8-stream-tutorial-examples/
+
+Design patterns java
+https://app.pluralsight.com/library/courses/design-patterns-java-behavioral/table-of-contents
+
+TDD Sring junit 5
+https://app.pluralsight.com/library/courses/tdd-spring-junit5/table-of-contents
