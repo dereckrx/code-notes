@@ -1,3 +1,7 @@
+---
+title: unknown
+---
+
 (async function () {
 var result = await failingPromise().catch((e) => { console.error(e.message) })
 console.log( result ? 'This was a success! ' + result : 'This was a failure.' )
