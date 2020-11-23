@@ -2,6 +2,18 @@
 const eq = require('./eq');
 const mockPromise = require('./mockPromise');
 
+// New promise
+let p = new Promise((resolve, reject) => resolve('ok'));
+p.then(result => eq(result, 'ok'));
+
+// Instantly resolve
+p = Promise.resolve('done');
+p.then(result => eq(result, 'done'));
+
+// Instantly reject
+p = Promise.reject('fail');
+p.catch(error => eq(error, 'fail'));
+
 // handles resolves
 mockPromise(true, 'ok').then((result) => {
   eq(result, 'ok');

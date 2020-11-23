@@ -119,7 +119,7 @@ Examples of expected errors:
 - API rate limiting
 - like an index being out of bounds for an array.
 
-Examples expected problem:
+Examples expected problems:
 - like a file not being found.
 - Due to an unexpected problem, 
 
