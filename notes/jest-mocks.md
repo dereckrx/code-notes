@@ -4,7 +4,16 @@ jest.mock('../../../../util/slack');
 ;
 const mockPostToSlack = PostToSlack as jest.Mock;
 
+## Three ways
+All require jest.mock('../path/to/file');
+jest.mock('../fooService);
+import * as FooService from '../fooService);
 
+const mockFooService = mock(FooService); // 
+const mockFooService = <jest.Mock<IFooService>>FooService;
+const mockFooServiceInstance = mocked(new FooService()); mys
+
+## -----
 https://stackoverflow.com/questions/48759035/mock-dependency-in-jest-with-typescript
 ```
 import { SomeClass } from './SomeClass';
@@ -27,9 +36,12 @@ const typedMockPredicate: jest.Mock<ReturnType<Predicate>> = jest.fn();
 //   send: jest.fn(),
 // }));
 
+## Using mocked from ts-jest
+Takes an instance
 // const mockGetCompanyRepo = mocked(repositories.GetCompanyRepo, true);
 
-Mock interface with `jest-mock-extended`
+## Mock interface 
+with `jest-mock-extended`
 const mock = mock<SomeInterface>();
 // typechecked mock with 
 
