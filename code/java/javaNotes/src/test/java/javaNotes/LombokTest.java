@@ -17,6 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class Lom {
   @Value
   @With
+  @Accessors(fluent = true)
   static class ImmutableVal {
     Integer value;
   }

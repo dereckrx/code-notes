@@ -6,10 +6,6 @@ import java.util.function.Consumer;
 
 class Eq {
 
-//  <T> void eq(T a, T b) {
-//    assertEquals(a, b);
-//  }
-
   public static <T> void eq(T a, T b) {
     if (a == null && b == null || (a != null && a.equals(b))) {
       System.out.println(".");
