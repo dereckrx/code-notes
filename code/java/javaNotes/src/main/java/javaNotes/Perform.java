@@ -1,13 +1,11 @@
 package javaNotes;
 
-import javaNotes.firstClassFunctions.FunctionTypes.F0;
-import javaNotes.firstClassFunctions.FunctionTypes.F1;
-import javaNotes.firstClassFunctions.FunctionTypes.F2;
+import javaNotes.firstClassFunctions.Func.F0;
+import javaNotes.firstClassFunctions.Func.F1;
+import javaNotes.firstClassFunctions.Func.F2;
 import lombok.SneakyThrows;
 import lombok.val;
 
-import java.util.function.BiFunction;
-import java.util.function.Function;
 import java.util.function.Supplier;
 
 public class Perform {

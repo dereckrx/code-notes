@@ -1,24 +1,25 @@
 package javaNotes;
 
-import lombok.val;
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.atomic.AtomicReference;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static javaNotes.Eq.eq;
 
 class TimingTest {
 
     @Test
     void timed() {
-        val description = "Supply carrot";
+        var description = "Supply carrot";
         AtomicReference<String> output = new AtomicReference<>("");
 
-        Timing.timed(description,
-            output::set,
-            () -> "carrot");
+        var result = Timing.timed(description, output::set, () -> {
+          // Do some stuff...
+          return "carrot";
+        });
 
-        assert(output.get().contains(description));
+        eq(result, "carrot");
+        eq(output.get().matches("Supply carrot took .* milliseconds"), true);
     }
 
 }
