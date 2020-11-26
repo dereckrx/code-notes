@@ -15,6 +15,7 @@ class Eq {
 
   public static void main(String args[]) {
     eq(null, null);
+    eq(null, 1);
     eq(1, 1);
     eq(1, 2);
     eq(1.0, 1);
