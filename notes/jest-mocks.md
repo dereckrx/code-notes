@@ -2,11 +2,11 @@
 title: unknown
 ---
 
-import { PostToSlack, GetEnvSlackChannel } from '../../../../util/slack';
+import { PostFoo } from '../../../../util/foo';
 
-jest.mock('../../../../util/slack');
+jest.mock('../../../../util/foo');
 ;
-const mockPostToSlack = PostToSlack as jest.Mock;
+const mockPostToFoo = PostToFoo as jest.Mock;
 
 ## Three ways
 All require jest.mock('../path/to/file');

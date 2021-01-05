@@ -29,3 +29,16 @@ test('should fetch users', () => {
   axios.get.mockResolvedValue(resp);
   axios.get().then(resp => expect(resp).toEqual(resp));
 });
+
+// Mock an interface with jest-mock-extended
+const mockedAnvilClient = mock<AnvilClientInterface>();
+
+// Mocking a constructor 
+import Anvil from '@anvilco/anvil';
+import { mock } from 'jest-mock-extended';
+import { AnvilClientInterface } from '../../../../lib/anvilPdfClient';
+
+jest.mock('@anvilco/anvil', () => jest.fn());
+const mockedAnvilClient = mock<AnvilClientInterface>();
+Anvil.mockImplementation(() => mockedAnvilClient);
+mockedAnvilClient.fillPDF.mockResolvedValue({ statusCode: 200, data: [] });
