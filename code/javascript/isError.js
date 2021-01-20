@@ -1,18 +1,15 @@
 const eq = require('./eq');
 
 class HttpException extends Error {
-  status: number; 
 
-  constructor(status: number, message: string) {
+  constructor(status, message) {
     super(message);
     this.status = status;
   }
 };
 
 class User  {
-  id: number; 
-
-  constructor(id: number) {
+  constructor(id) {
     this.id = id;
   }
 };
@@ -23,7 +20,7 @@ class User  {
 // export const isError: <T>(maybeError: any) => asserts maybeError is T = (
 //   maybeError
 // ) => {
-export const isError = (maybeError: any): boolean => {
+const isError = (maybeError) => {
   if (maybeError instanceof HttpException || maybeError instanceof Error) {
     return true;
   }
@@ -33,15 +30,15 @@ export const isError = (maybeError: any): boolean => {
 eq(isError(new HttpException(400, 'bla')), true);
 eq(isError(new Error('bla')), true);
 
-const foos: Record<string,  {value: string} | Error> = {
+const foos = {
   error: new Error('error foo'),
   httpError: new HttpException(400, 'http error foo'),
   value: {value: 'foo'}
 };
 
-const getFoo = (kind: string):  {value: string} | Error  => foos[kind];
+const getFoo = (kind) => foos[kind];
 
-function returnTypeChecking(foo: Error | {value: string}): string {
+function returnTypeChecking(foo) {
   // Doesn't work, TS wont know what type foo is on the next line
   // if(isError(foo)) {
   //   return foo;
@@ -56,7 +53,7 @@ function returnTypeChecking(foo: Error | {value: string}): string {
   }
 }
 
-function getUser(error: boolean): User | HttpException {
+function getUser(error) {
   return error ?  new HttpException(500, 'http user error') : new User(1) ;
 }
 
