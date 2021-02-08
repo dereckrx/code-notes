@@ -1,0 +1,88 @@
+<!--
+source:
+- https://dribbble.com/shots/9890709-Neumorphism-UI-Trend-2020
+- https://dribbble.com/tags/neo_skeuomorphism
+Color converter: https://www.w3schools.com/colors/colors_converter.asp
+-->
+<!doctype html>
+<html>
+<head>
+  <title>App</title>
+  <style>
+    body {
+      background-color: #ECF0F3;
+      color: #AAA;
+      font-size: 10px;
+      letter-spacing: 2px;
+      font-family: Monaco;
+      text-align: center;
+    }
+
+    .container {
+      padding: 24px;
+      width: 800px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .roundBox {
+      height: 200px;
+      width: 200px;
+      border-radius: 30px;
+      margin-bottom: 24px;
+    }
+
+    .upBox {
+      background-color: #eaecf1; /*#D1D9E6;*/
+    }
+
+    .circleBox {
+      height: 200px;
+      width: 200px;
+      border-radius: 100px;
+      margin-bottom: 24px;
+    }
+
+    .innerCircle {
+      position: relative;
+      top: 40px;
+      left: 40px;
+      height: 120px;
+      width: 120px;
+      border-radius: 60px;
+    }
+
+    /* box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit; */
+    .dropShadow {
+      box-shadow: 18px 18px 30px #D1D9E6, -18px -18px 30px #FFF;
+    }
+
+    .innerShadow {
+      box-shadow: 18px 18px 30px #D1D9E6 inset, -18px -18px 30px #FFF inset;
+    }
+  </style>
+</head>
+<div id="app">
+  <div class="container">
+    <div>
+      <div class="roundBox dropShadow upBox"></div>
+      DROP SHADOW
+    </div>
+
+    <div>
+      <div class="roundBox innerShadow"></div>
+      INNER SHADOW
+    </div>
+
+    <div>
+      <div class="circleBox innerShadow">
+        <div class="innerCircle dropShadow"></div>
+      </div>
+      INNER SHADOW
+    </div>
+  </div>
+</div>
+<body>
+<script src="js/index.js"></script>
+</body>
+</html>
